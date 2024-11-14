@@ -14,7 +14,7 @@ let questions = []; // To hold questions after fetching
 // Load and display questions one at a time
 async function fetchQuestions() {
     try {
-        const response = await fetch('questions.json');
+        const response = await fetch('./questions.json');
         questions = await response.json();
         showQuestion(currentQuestionIndex);
     } catch (error) {
@@ -175,7 +175,7 @@ function showResults() {
 async function findClosestProfessions(userScores) {
     try {
         // Load and parse the CSV file with PapaParse
-        const response = await fetch('profession_scores.csv');
+        const response = await fetch('./profession_scores.csv');
         const csvData = await response.text();
         const professions = Papa.parse(csvData, {
             header: true, // Use first row as header
