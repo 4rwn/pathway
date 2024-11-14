@@ -1,22 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Mapping domain codes to full trait names
-    const domainNames = {
-        N: 'Neuroticism',
-        E: 'Extraversion',
-        O: 'Openness',
-        A: 'Agreeableness',
-        C: 'Conscientiousness'
-    };
+// Mapping domain codes to full trait names
+const domainNames = {
+    N: 'Neuroticism',
+    E: 'Extraversion',
+    O: 'Openness',
+    A: 'Agreeableness',
+    C: 'Conscientiousness'
+};
 
-    let currentQuestionIndex = 0;
-    let userResponses = {}; // Store user responses to calculate results at the end
-    let questions = []; // To hold questions after fetching
+let currentQuestionIndex = 0;
+let userResponses = {}; // Store user responses to calculate results at the end
+let questions = []; // To hold questions after fetching// Load and display questions one at a time
 
-    // Start the quiz on page load
-    window.onload = fetchQuestions;
-});
-
-// Load and display questions one at a time
 async function fetchQuestions() {
     try {
         const response = await fetch('./questions.json');
@@ -229,3 +223,7 @@ function displayClosestProfessions(closestProfessions) {
     });
     resultDiv.style.display = 'block';
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetchQuestions();
+});
