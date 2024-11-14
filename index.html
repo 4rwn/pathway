@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web App Prototype</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Five Personality Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
+    <h1>Big Five Personality Test</h1>
+    
+    <!-- Section for direct score input -->
+    <div id="manualScoreInput">
+        <h2>Input Your Scores Directly</h2>
+        <form id="manualScoresForm">
+            <label>Neuroticism: <input type="number" name="N" min="0" max="100" required></label><br>
+            <label>Extraversion: <input type="number" name="E" min="0" max="100" required></label><br>
+            <label>Openness: <input type="number" name="O" min="0" max="100" required></label><br>
+            <label>Agreeableness: <input type="number" name="A" min="0" max="100" required></label><br>
+            <label>Conscientiousness: <input type="number" name="C" min="0" max="100" required></label><br>
+            <button type="button" onclick="calculateClosestProfessionsFromInput()">Calculate Closest Professions</button>
+        </form>
+    </div>
 
-  <header>
-    <h1>Web App Prototype</h1>
-  </header>
+    <!-- Section for question-based personality test -->
+    <div id="personalityTest"></div>
 
-  <main>
-    <section id="content">
-      <h2>Welcome to the Prototype</h2>
-      <p>This is a simple front-end prototype for a web application.</p>
+    <!-- Result section -->
+    <div id="result" style="display: none;">
+        <h2>Your Personality Scores:</h2>
+        <p id="N">Neuroticism: </p>
+        <p id="E">Extraversion: </p>
+        <p id="O">Openness: </p>
+        <p id="A">Agreeableness: </p>
+        <p id="C">Conscientiousness: </p>
+    </div>
 
-      <button id="showMoreButton">Show More</button>
-      <div id="additionalContent" style="display: none;">
-        <p>Here's some additional content that appears when you click "Show More".</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2024 Web App Prototype</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

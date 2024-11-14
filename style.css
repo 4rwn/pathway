@@ -1,48 +1,71 @@
-/* Reset some default browser styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  header, footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-  }
-  
-  main {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  #showMoreButton {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #showMoreButton:hover {
-    background-color: #0056b3;
-  }
-  
-  #additionalContent {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #e9ecef;
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.trait-section {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+.question {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Container for the radio buttons and labels */
+.options-container {
+  display: flex;
+  gap: 20px; /* Horizontal space between each radio button and label pair */
+  margin-top: 10px; /* Vertical space between question and options */
+}
+
+/* Align radio button and label in a column */
+.option-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align label and radio button */
+}
+
+/* Style for labels below each radio button */
+.option-label {
+  margin-top: 5px; /* Small space above labels */
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Vertical space between answer options and buttons */
+.buttons-container {
+  margin-top: 20px; /* Space above buttons */
+}
+
+/* Horizontal space between buttons */
+.buttons-container button {
+  margin-right: 10px;
+}
