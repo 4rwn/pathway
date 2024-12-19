@@ -1,0 +1,59 @@
+
+.logo{
+    font-size: 2em;
+    font-optical-sizing: auto;
+    font-weight: 750;
+    font-style: normal;
+    background-image: linear-gradient(90deg, rgb(0, 162, 255) 0%, rgb(0, 68, 255) 75%, rgb(0, 26, 255) 100%);
+    background-clip: text;
+    color:transparent;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: center;
+    margin: 10px;
+}
+
+.headerLine{
+    font-family: "Montserrat", sans-serif;
+    height: 4em;
+}
+
+.account{
+    padding: 5px;
+    margin-right: 5px;
+    vertical-align: center;
+    float: right;
+    display: inline;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.account:hover{
+    background-color: hsl(216, 100%, 90%);
+}
+
+.accText{
+    font-size: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 4px;
+}
+
+.accIcon{
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo1{
+    font-size: 2em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    background-image: linear-gradient(90deg, rgb(0, 162, 255) 0%, rgb(0, 68, 255) 46%, rgb(0, 26, 255) 100%);
+    padding: 20px;
+    border-radius: 5px
+}
+

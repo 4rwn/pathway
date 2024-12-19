@@ -1,0 +1,33 @@
+.dashboard{
+    font-family: "Montserrat", sans-serif;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressBar{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.resultsButton{
+    font-size: 1.2em;
+    background-color: hsl(217, 100%, 95%);
+    color: hsl(0, 0%, 50%);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: solid 2px hsl(0, 0%, 50%);
+}
+
+.resultsButton:hover{
+    background-color: hsl(202, 100%, 75%);
+    color: hsl(217, 100%, 95%);
+    border: solid 2px hsl(202, 100%, 75%);
+}
